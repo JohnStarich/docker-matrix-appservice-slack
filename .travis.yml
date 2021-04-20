@@ -1,0 +1,8 @@
+language: bash
+
+services:
+  - docker
+
+jobs:
+  include:
+    - script: docker build -t johnstarich/matrix-appservice-slack:latest .
