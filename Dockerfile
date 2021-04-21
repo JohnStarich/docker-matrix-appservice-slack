@@ -1,6 +1,6 @@
 FROM matrixdotorg/matrix-appservice-slack:release-1.8.0-rc1
 
-COPY --from=johnstarich/env2config:v0.1.1 /env2config /
+COPY --from=johnstarich/env2config:v0.1.2 /env2config /
 ENV E2C_CONFIGS=config,slack
 
 ENV CONFIG_OPTS_FILE=/config/config.yaml
