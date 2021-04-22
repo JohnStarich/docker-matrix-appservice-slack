@@ -19,5 +19,7 @@ ENV REGISTER_OPTS_IN_url=BRIDGE_URL
 ENV REGISTER_OPTS_IN_id=BRIDGE_ID
 ENV REGISTER_OPTS_IN_hs_token=BRIDGE_HS_TOKEN
 ENV REGISTER_OPTS_IN_as_token=BRIDGE_AS_TOKEN
+ENV REGISTER_namespaces.users.0.exclusive=true
+ENV REGISTER_OPTS_IN_namespaces.users.0.regex=BRIDGE_USERS_REGEX
 
 ENTRYPOINT ["/env2config", "node", "lib/app.js", "-c", "/config/config.yaml", "-f", "/register/slack-bridge.yaml"]
