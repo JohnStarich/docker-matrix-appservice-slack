@@ -5,11 +5,11 @@ Wraps matrix-appservice-slack with an [env-based config][e2c].
 
 ## Quick Start
 
-Use the below Docker stack for environment variables, default volume locations, and ports. Once the `${YOUR_*}` and example.com variables are filled in, deployed, and you've got a [Synapse][] homserver running, then you're all set!
+Use the below Docker stack for environment variables, default volume locations, and ports. Once the `${YOUR_*}` and example.com variables are filled in, deployed, and you've got a [Synapse][] container running, then you're all set!
 
 The below stack includes a [pantalaimon][] container to support end-to-end encrypted rooms. It does require 1 login to be made for initial setup, described below.
 
-Once the bridge is up and running, it will generate a registration file and write it to the external `matrix_bridge` volume, which should be mounted to your Matrix homeserver (like this [Synapse][] container) and the file path included in the server's list of bridge files `app_service_config_files`.
+Once the bridge is up and running, it will generate a registration file and write it to the external `matrix_bridge` volume, which should be mounted to your Matrix homeserver (like [Synapse][]) and the file path included in the server's list of bridge files `app_service_config_files`.
 
 [pantalaimon]: https://github.com/JohnStarich/docker-matrix-pantalaimon
 [Synapse]: https://github.com/JohnStarich/docker-synapse
